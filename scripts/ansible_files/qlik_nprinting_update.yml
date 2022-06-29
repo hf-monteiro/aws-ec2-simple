@@ -1,0 +1,25 @@
+---
+- hosts: nprinting
+  gather_facts: no
+  tasks:
+    - name: Pull S3 Scripts
+      ansible.windows.win_powershell:
+        script: |
+          $bucket = 'example-sense-files'
+          $keyPrefix = 'packages/'
+          $localPath = 'C:\Users\Administrator\'
+
+          $objects = Get-S3Object -BucketName $bucket -KeyPrefix $keyPrefix 
+
+          foreach($object in $objects) {
+            $localFileName = $object.Key -replace $keyPrefix, ''
+            if ($localFileName -ne '') {
+              $localFilePath = Join-Path $localPath $localFileName
+              Copy-S3Object -BucketName $bucket -Key $object.Key -LocalFile $localFilePath
+            }
+          }
+       
+    - name: Updating Designer
+      ansible.windows.win_powershell:
+        script: |
+          & 'C:\Users\ansible\nprinting-update\exampleNPrinting_Designer.exe' /S /v /qn
