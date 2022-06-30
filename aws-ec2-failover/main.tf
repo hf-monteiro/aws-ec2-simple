@@ -7,7 +7,7 @@ provider "aws" {
 ################################################################################
 
 ## example AMI ##
-data "aws_ami" "example_sense_enterprise" {
+data "aws_ami" "example_app_enterprise" {
   most_recent = true
   owners      = ["amazon"]
 
@@ -26,7 +26,7 @@ module "ec2" {
   source = "../modules/ec2_instance"
 
   name                        = var.name
-  ami                         = data.aws_ami.example_sense_enterprise.id
+  ami                         = data.aws_ami.example_app_enterprise.id
   instance_type               = var.instance_type
   availability_zone           = var.availability_zone
   subnet_id                   = var.subnet_id
@@ -70,7 +70,7 @@ module "ec2_network_interface" {
 
   name = "${var.name}-network-interface"
 
-  ami           = data.aws_ami.example_sense_enterprise.id
+  ami           = data.aws_ami.example_app_enterprise.id
   instance_type = var.instance_type
 
   network_interface = [

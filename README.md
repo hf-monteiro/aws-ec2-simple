@@ -1,10 +1,14 @@
+# A simple diagram about the solution:
+
+![diagram](diagram/project01.png)
+
 # Prerequisites to run example Infrastructure 
-* Create 2 S3 Buckets, one for storing all the conf/installation scripts *(example name:example-sense-files)* and a second bucket for the Terraform state files *(example name: example-sense-tfstate)*
-* To have or create a VPC with at least 2 subnets where the resources are going to be created.
+* Create 2 S3 Buckets, one for storing all the conf/installation scripts *(example name:example-app-files)* and a second bucket for the Terraform state files *(example name: example-app-tfstate)*
+* To have or create a VPC with at least 3 subnets (on different AZ's) where the resources are going to be created.
 * Create key pairs on AWS to access via RDP to the Windows EC2 instances.
-* Install terraform in the machines that will execute UAT. *(Ref: https://learn.hashicorp.com/tutorials/terraform/install-cli)*
-* Install terragrunt in the machines that will execute UAT. *(Ref: https://terragrunt.gruntwork.io/docs/getting-started/install/)*
-* Install AWS CLI. *(Ref:https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)* in the machines that will execute the UAT.
+* Install terraform in the machines that will execute. *(Ref: https://learn.hashicorp.com/tutorials/terraform/install-cli)*
+* Install terragrunt in the machines that will execute. *(Ref: https://terragrunt.gruntwork.io/docs/getting-started/install/)*
+* Install AWS CLI. *(Ref:https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)* in the machines that will execute.
 * To have or create a IAM user with admin permissions to create and manage the AWS resources.
 # How to create example Infrastructure
 ## AWS example variables and parameters

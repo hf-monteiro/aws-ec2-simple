@@ -37,14 +37,14 @@ module "security_group" {
       from_port   = 4241
       to_port     = 4244
       protocol    = "tcp"
-      description = "example Sense nodes communication"
+      description = "example app nodes communication"
       cidr_blocks = var.cidr_blocks
     },
     {
       from_port   = 4432
       to_port     = 4432
       protocol    = "tcp"
-      description = "Default listening port for the example Sense Repository Database"
+      description = "Default listening port for the example app Repository Database"
       cidr_blocks = var.cidr_blocks
     },
     {
@@ -58,21 +58,21 @@ module "security_group" {
       from_port   = 4747
       to_port     = 4747
       protocol    = "tcp"
-      description = "example Sense Engine Service (QES) for communication with the example Sense web clients."
+      description = "example app Engine Service (QES) for communication with the example app web clients."
       cidr_blocks = var.cidr_blocks
     },
     {
       from_port   = 5050
       to_port     = 5050
       protocol    = "tcp"
-      description = "example Sense Scheduler Service (QSS) master REST engine"
+      description = "example app Scheduler Service (QSS) master REST engine"
       cidr_blocks = var.cidr_blocks
     },
     {
       from_port   = 5151
       to_port     = 5151
       protocol    = "tcp"
-      description = "example Sense Scheduler Service (QSS) slave REST engine."
+      description = "example app Scheduler Service (QSS) slave REST engine."
       cidr_blocks = var.cidr_blocks
     },
       {

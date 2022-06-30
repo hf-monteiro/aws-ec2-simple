@@ -5,7 +5,7 @@ Get-Disk | Where PartitionStyle -eq 'raw' | Initialize-Disk -PartitionStyle MBR 
 Start-Service -Name ShellHWDetection
 
 # S3 get files
-$bucket = "example-sense-files"
+$bucket = "example-app-files"
 $keyPrefix = "packages/"
 $localPath = "C:\Users\Administrator\"
 

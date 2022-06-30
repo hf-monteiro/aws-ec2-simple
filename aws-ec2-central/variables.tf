@@ -25,7 +25,7 @@ variable "region" {
 variable "name" {
   description = "Server name"
   type        = string
-  default     = "example-sense-central"
+  default     = "example-app-central"
 }
 
 variable "instance_type" {
@@ -49,7 +49,7 @@ variable "iam_policy_name" {
 variable "key_name" {
   description = "AWS key pair name"
   type        = string
-  default     = "example-Sense-Central-Node-Key"
+  default     = "example-app-Central-Node-Key"
 }
 
 variable "cidr_blocks" {
