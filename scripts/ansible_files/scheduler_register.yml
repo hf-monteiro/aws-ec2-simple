@@ -1,7 +1,0 @@
----
-- hosts: central
-  gather_facts: no
-  tasks:
-
-   - name: Run remote PowerShell Script
-     win_command: powershell.exe -ExecutionPolicy ByPass -File C:\Users\Administrator\scheduler_register.ps1
