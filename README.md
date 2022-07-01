@@ -12,7 +12,7 @@
 * To have or create a IAM user with admin permissions to create and manage the AWS resources.
 # How to create example Infrastructure
 ## AWS example variables and parameters
-Since the development of the TF templates and all of the infrastructure was done on a Bairesdev AWS account, information like vpc id, subnets, ip’s... is specific for our
+Since the development of the TF templates and all of the infrastructure was done on a example AWS account, information like vpc id, subnets, ip’s... is specific for our
 environment.
 This list of parameters are the ones that needs to be modified in the variables file on Terraform in order for example team to spin up the AWS components on their environment:
 * VPC ID
