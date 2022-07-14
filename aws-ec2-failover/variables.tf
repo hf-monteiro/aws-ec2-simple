@@ -1,13 +1,13 @@
 variable "image_id" {
   description = "Image ID used on EC2"
   type        = string
-  default     = "ami-0c19f80dba70861db"
+  default     = "ami-0000w0000"
 }
 
 variable "vpc_id" {
   description = "VPC ID"
   type        = string
-  default     = "vpc-0047d70bf86bdf7ef"
+  default     = "vpc-0000w0000"
 }
 
 variable "availability_zone" {
@@ -37,7 +37,7 @@ variable "instance_type" {
 variable "subnet_id" {
   description = "AWS Subnet ID"
   type        = string
-  default     = "subnet-06c309b2a13051e40"
+  default     = "subnet-0000w0000"
 }
 
 variable "iam_policy_name" {
@@ -67,5 +67,5 @@ variable "ec2_role" {
 variable "ec2_security_group_id" {
    description = "Security Group"
    type        = list(string)
-   default     = ["sg-0da81d0098a4ecc62"]
+   default     = ["sg-0000w0000"]
  }
