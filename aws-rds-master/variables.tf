@@ -55,13 +55,13 @@ variable "password" {
 variable "subnet_ids" {
   description = "RDS instance type"
   type        = list(string)
-  default     = ["subnet-06c309b2a13051e40", "subnet-04647958e522fa7a8", "subnet-04affbd43b99ee847"]
+  default     = ["subnet-0000w0000", "subnet-04647958e522fa7a8", "subnet-04affbd43b99ee847"]
 }
 
 variable "vpc_id" {
   description = "VPC ID"
   type        = string
-  default     = "vpc-0047d70bf86bdf7ef"
+  default     = "vpc-0000w0000"
 }
 
 variable "availability_zone" {
@@ -85,7 +85,7 @@ variable "name" {
 variable "subnet_id" {
   description = "AWS Subnet ID"
   type        = string
-  default     = "subnet-06c309b2a13051e40"
+  default     = "subnet-0000w0000"
 }
 
 variable "cidr_blocks" {

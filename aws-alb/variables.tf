@@ -1,19 +1,19 @@
 variable "image_id" {
   description = "Image ID used on EC2"
   type        = string
-  default     = "ami-0c19f80dba70861db"
+  default     = "ami-0000w0000"
 }
 
 variable "vpc_id" {
   description = "VPC ID"
   type        = string
-  default     = "vpc-0047d70bf86bdf7ef"
+  default     = "vpc-0000w0000"
 }
 
 variable "alb_vpc_id" {
   description = "ALB VPC ID"
   type        = list(string)
-  default     = ["subnet-06c309b2a13051e40","subnet-04affbd43b99ee847"]
+  default     = ["subnet-0000w0000","subnet-04affbd43b99ee847"]
 }
 
 variable "az" {
